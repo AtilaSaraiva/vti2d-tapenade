@@ -1,13 +1,14 @@
-# Nix python template
+# Código Born e Adjunto da equação pseudo acústica de Reynam VTI 2D
 
-This is my personal template for python and nix programming when I don't want to or can't use the poetry2nix template. I use niv for pinning the nixpkgs and I also import an overlay where some custom python packages I write are available.
+Esse repositório contém um código gerado de modelagem da equação pseudo acústica de Reynam VTI 2D (`simplified code.c`), e os códigos gerados pelo software [Tapenade](https://team.inria.fr/ecuador/en/tapenade/) da modelagem Born (`simplified code_d.c`) e do estado adjunto (`simplified code_b.c`).
 
-## Making the development environment available
+## Reproduzindo os resultados
 
-Using [nix](nixos.org), run:
+Usando [nix](https://nixos.org/download.html#nix-install-linux), rode:
 ```
-git clone https://github.com/AtilaSaraiva/<repo-name>.git
-cd <repo-name>
+git clone <este-repositório>
+cd <este-repositório>
 nix-shell
+make
 ```
-and a shell with all the necessary dependencies will appear.
+e uma shell efêmera com o tapenade disponível, e com `make` os códigos serão gerados.
